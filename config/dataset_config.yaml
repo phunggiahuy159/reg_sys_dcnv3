@@ -60,7 +60,7 @@ ML_1M_7_x1:
 
 iPinYou_x1_csv:
     data_format: csv
-    data_root: ../../../data/
+    data_root: /content/iPinYou
     feature_cols:
     -   active: true
         dtype: str
@@ -70,9 +70,9 @@ iPinYou_x1_csv:
         type: categorical
     label_col: {dtype: float, name: click}
     min_categr_count: 2
-    test_data: ../../../data/iPinYou/test.csv
-    train_data: ../../../data/iPinYou/train.csv
-    valid_data: ../../../data/iPinYou/test.csv
+    test_data: /content/iPinYou/test.csv
+    train_data: /content/iPinYou/train.csv
+    valid_data: /content/iPinYou/test.csv
 
 KKBox_csv:
     data_format: csv

@@ -21,7 +21,8 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 import sys
 import logging
 from datetime import datetime
-from fuxictr.utils import load_config, set_logger, print_to_json, print_to_list, delete_model_files
+from fuxictr.utils import load_config, set_logger, print_to_json, print_to_list
+from fuxictr.utils import delete_model_files
 from fuxictr.features import FeatureMap
 from fuxictr.pytorch.torch_utils import seed_everything
 from fuxictr.pytorch.dataloaders import H5DataLoader
@@ -40,7 +41,7 @@ if __name__ == '__main__':
     '''
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default='./config/', help='The config directory.')
-    parser.add_argument('--expid', type=str, default='DCNv3_Criteo', help='The experiment id to run.')
+    parser.add_argument('--expid', type=str, default='DCNv3_iPinYou_x1', help='The experiment id to run.')
     parser.add_argument('--gpu', type=int, default=0 , help='The gpu index, -1 for cpu')
     args = vars(parser.parse_args())
     
@@ -88,4 +89,4 @@ if __name__ == '__main__':
                     "N.A.", print_to_list(valid_result), print_to_list(test_result)))
 
     model_dir = os.path.join(params["model_root"], feature_map.dataset_id)
-    delete_model_files(model_dir, params["model_id"])
+    # delete_model_files(model_dir, params["model_id"])

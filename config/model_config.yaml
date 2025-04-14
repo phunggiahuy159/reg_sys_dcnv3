@@ -199,7 +199,7 @@ DCNv3_iPinYou_x1:
     layer_norm: True
     batch_norm: True
     num_heads: 1
-    epochs: 100
+    epochs: 1
     shuffle: True
     seed: 2024
     num_workers: 4
