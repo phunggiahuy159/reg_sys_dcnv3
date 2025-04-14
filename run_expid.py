@@ -22,7 +22,7 @@ import sys
 import logging
 from datetime import datetime
 from fuxictr.utils import load_config, set_logger, print_to_json, print_to_list
-from fuxictr.utils import delete_model_files
+# from fuxictr.utils import delete_model_files
 from fuxictr.features import FeatureMap
 from fuxictr.pytorch.torch_utils import seed_everything
 from fuxictr.pytorch.dataloaders import H5DataLoader
